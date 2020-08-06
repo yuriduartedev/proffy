@@ -31,7 +31,7 @@ html, body, #root {
   height: 100vh;
 }
 
-bodu {
+body {
   background: var(--color-background);
 }
 
