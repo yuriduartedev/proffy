@@ -11,10 +11,14 @@ import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 
 function Landing() {
-  const navigation = useNavigation();
+  const { navigate } = useNavigation();
 
   function handleNavigationToGiveClassesPage() {
-    navigation.navigate('GiveClasses');
+    navigate('GiveClasses');
+  }
+
+  function handleNavigateToPages() {
+    navigate('Study');
   }
 
   return (
@@ -28,6 +32,7 @@ function Landing() {
 
       <View style={styles.buttonsContainer}>
         <RectButton
+          onPress={handleNavigateToPages}
           style={[styles.button, styles.buttonPrimary]}
         >
           <Image source={studyIcon} />
